@@ -11,4 +11,8 @@ For instance, to access the GPG keyring-server "pool.sks-keyservers.net" over po
 
     $ sudo ./simple-bypass.sh pool.sks-keyservers.net 11371
 
+To remove the bypass, run the following command:
+
+    $ sudo ./simple-bypass.sh -R pool.sks-keyservers.net 11371
+
 TODO: implement.
