@@ -11,15 +11,15 @@ For this utility to work, you need access to a SSH-server on an unfiltered netwo
 
 For instance, to access the GPG keyring-server "pool.sks-keyservers.net" over port 11371 on a filtered network, you would do the following:
 
-=== Usage ===
+**Usage**
 
-    $ sudo ./simple-bypass.sh pool.sks-keyservers.net 11371
+    $ sudo ./pin-prick.sh pool.sks-keyservers.net 11371
 
 To remove the bypass(es), issue the following command:
 
-    $ sudo ./simple-bypass.sh
+    $ sudo ./pin-prick.sh
 
-=== Known limitations ===
+**Known limitations**
 
 The following limitations apply:
 
