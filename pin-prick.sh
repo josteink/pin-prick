@@ -17,7 +17,7 @@ SSH_USER="`whoami`"
 
 function usage()
 {
-    echo "usage: sudo ./pin-prick.sh HOST PORT [ -h SSH_HOST ] [ -p SSH_PORT ] [ -u SSH_USER ]"
+    echo "usage: sudo ./pin-prick.sh HOST PORT [ -h SSH_HOST ] [ -p SSH_PORT ] [ -u SSH_USER ] [ -R (removes all) ]"
     exit 1
 }
 
@@ -91,6 +91,12 @@ function install()
     then
 	usage
     fi
+
+    if [ "x$SSH_HOST" = "x" ]
+    then
+	echo "No SSH host configured. Either create config file, or provide config via parameters."
+	exit 1
+    fi
     
     echo "Installing pin-prick for $HOST:$PORT..."
     echo ""
@@ -99,7 +105,7 @@ function install()
     sudo sh -c "echo '127.0.0.1 $HOST $TAG' >>'$SRC'"
     echo "Done."
     echo ""
-    echo "Creating tunnel. You may be asked for password..."
+    echo "Creating SSH tunnel. You may be asked for SSH password..."
     ssh $SSH_USER@$SSH_HOST -p $SSH_PORT -L $PORT:$HOST:$PORT echo -e "PINPRICK TUNNEL OPENED. LOG OUT FROM SSH TO CLOSE."
 }
 
