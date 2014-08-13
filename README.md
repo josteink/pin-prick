@@ -3,7 +3,7 @@ simple-bypass
 
 Bypass firewalls for named hosts and specific ports easily. This utility works by creating SSH-tunnels and host-name overrides.
 
-This utility merely packages existing available functionality.
+This utility merely packages existing available functionality and doesn't rely on any "hacks".
 
 For this utility to work, you need access to a SSH-server on an unfiltered network. The SSH-server itself has to be reachable on the network where other bypasses are wanted.
 
