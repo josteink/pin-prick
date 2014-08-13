@@ -17,7 +17,7 @@ For instance, to access the GPG keyring-server "pool.sks-keyservers.net" over po
 
 To remove the bypass(es), issue the following command:
 
-    $ sudo ./pin-prick.sh
+    $ sudo ./pin-prick.sh -R
 
 **Known limitations**
 
