@@ -27,4 +27,3 @@ The following limitations apply:
 * Once a host has been "pin-pricked", it can only be accessed through pin-pricked holes.
 * You can only pin-prick one port per session.
 
-**TODO: implement.**
