@@ -106,7 +106,7 @@ function install()
     echo "Done."
     echo ""
     echo "Creating SSH tunnel. You may be asked for SSH password..."
-    ssh $SSH_USER@$SSH_HOST -p $SSH_PORT -L $PORT:$HOST:$PORT echo -e "PINPRICK TUNNEL OPENED. LOG OUT FROM SSH TO CLOSE."
+    ssh $SSH_USER@$SSH_HOST -p $SSH_PORT -L $PORT:$HOST:$PORT 'echo -e "PINPRICK TUNNEL OPENED. LOG OUT FROM SSH TO CLOSE." ; bash'
 }
 
 $MODE
